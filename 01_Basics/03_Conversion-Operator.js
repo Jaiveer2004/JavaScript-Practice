@@ -1,10 +1,11 @@
-let score = "33"
+let score = "33a"
 
 // console.log(typeof score)
 
 // Conversion to Number
 let valueInNumber = Number(score) // Will convert String to Number
 // console.log(typeof valueInNumber)
+// console.log(valueInNumber)
 
 // NaN : Not a Number 
 
@@ -18,7 +19,8 @@ let valueInNumber = Number(score) // Will convert String to Number
 // In Short
 // "33" => 33
 // "33ab" => NaN
-// null, undefined => NaN
+// null => 0
+// undefined => NaN
 // true => 1, false => 0
 
 // Conversion to Boolean
@@ -64,7 +66,7 @@ let str3 = str1 + str2
 // console.log(+"")
 
 let num1, num2, num3
-num1 = num2= num3 = 2 + 2
+num1 = num2 = num3 = 2 + 2
 
 let gameCounter = 100
 ++gameCounter

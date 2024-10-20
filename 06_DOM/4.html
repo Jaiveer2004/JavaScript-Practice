@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai aur code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+
+<script>
+    function addElementToList(name) {
+        const listItem = document.createElement('li');
+
+        const text = document.createTextNode(name);
+        listItem.appendChild(text)
+
+        const ul = document.querySelector('.language');
+        ul.appendChild(listItem);
+    }
+
+    addElementToList('Python');
+    addElementToList('Java');
+    addElementToList('C++');
+
+    // Edit Values
+    const editValue = document.querySelector("li:nth-child(2)")
+    const value = document.createElement('li');
+    value.textContent = "Mojo"
+    editValue.replaceWith(value)
+
+
+
+    const firstValue = document.querySelector("li:first-child");    
+    const valueChange = document.createElement('li')
+    valueChange.textContent = "Java"
+    firstValue.replaceWith(valueChange) 
+
+    // Remove
+
+    const lastValue = document.querySelector("li:last-child");
+    lastValue.remove();
+
+</script>
+
+</html>

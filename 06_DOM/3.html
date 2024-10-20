@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai aur Code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+
+</body>
+<script>
+    // This is how we can create a div using JavaScript
+    // const div = document.createElement('div')
+    // console.log(div);
+
+    // div.className = 'main';
+    // div.id = Math.round(Math.random() * 10 + 1);
+    // div.setAttribute("title", "generated title");
+    // div.style.backgroundColor = 'green';
+    // div.style.padding = '12px';
+    // // div.innerText = 'Chai aur Code';
+    // const addText = document.createTextNode("Chai aur Code");
+    // div.appendChild(addText);
+    // document.body.appendChild(div);
+
+    function createDiv(txt, cls, id, bgc) {
+        const div = document.createElement('div');
+        div.setAttribute('class', cls);
+        div.setAttribute('id', id);
+        div.style.backgroundColor = bgc;
+        div.style.padding = "10px";
+        div.style.margin = "10px";
+
+
+        const addText = document.createTextNode(txt);
+        div.append(addText);
+
+        document.body.append(div);
+    }
+
+    // createDiv("Jaiveer Singh", "C1", "idd", "blue")
+
+    // const inputNum = prompt("Enter how many times you want to make the div: ");
+    // for(let i = 0; i < input; i++) {
+    //     createDiv("Jaiveer Singh", "C1", "idd", "green");
+    // }
+    
+    const inputColor = prompt("Enter bgColor: ");
+    const Text = prompt("Enter Text: ");
+    const className = prompt("Enter Class name: ");
+    const idName = prompt("Enter ID name: ");
+
+    createDiv(Text, className, idName, inputColor);
+
+
+</script>
+</html>

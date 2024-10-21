@@ -7,7 +7,7 @@ const repoCount = 50
 
 const gameName = new String("Jaiveer-Singh")
 
-// console.log(gameName[0])
+// console.log(gameName[0])`    `
 // console.log(gameName.__proto__)
 
 // console.log(gameName.length)
@@ -31,5 +31,5 @@ const url = "https://www.google.com/"
 // console.log(url.includes("www"))
 
 // Convert String to Array based on a condition
-// console.log(url.split("."))
+console.log(url.split("."))
 

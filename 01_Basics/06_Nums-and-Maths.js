@@ -5,12 +5,14 @@ const score = 400
 
 // If we want to define the type of the data statically
 const balance = new Number(400)
+const name = new String("Hello")
+
 // console.log(balance) // This gives output as "Number : 400"
 
 // console.log(balance.toString())  
-// console.log(balance.toFixed(3)) // used to fix the decimals as "2".
+// console.log(balance.toFixed(2)) // used to fix the decimals as "2".
 
-const otherNumber = 123.8966
+const otherNumber = 123.9666
 // console.log(otherNumber.toPrecision(4))
 
 const hundreds = 100000 

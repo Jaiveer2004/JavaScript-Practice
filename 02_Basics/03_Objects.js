@@ -41,5 +41,5 @@ JsUser.greeting2 = function() {
     console.log(`Hello, ${this["Full-Name"]}`)
 }
 
-JsUser.greeting()
-JsUser.greeting2()
+// JsUser.greeting()
+// JsUser.greeting2()

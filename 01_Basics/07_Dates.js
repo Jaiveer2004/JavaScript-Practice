@@ -8,6 +8,7 @@ let myDate = new Date()
 // console.log(myDate.toJSON())
 // console.log(myDate.toLocaleDateString())
 // console.log(myDate.toTimeString())
+// console.log(myDate.toLocaleTimeString('en-IN'))
 
 // let myCreatedDate = new Date(2024, 0, 23)
 let myCreatedDate = new Date("01-14-2023")

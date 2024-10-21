@@ -8,12 +8,12 @@ const balance = new Number(400)
 // console.log(balance) // This gives output as "Number : 400"
 
 // console.log(balance.toString())  
-// console.log(balance.toFixed(2)) // used to fix the decimals as "2".
+// console.log(balance.toFixed(3)) // used to fix the decimals as "2".
 
 const otherNumber = 123.8966
 // console.log(otherNumber.toPrecision(4))
 
-const hundreds = 100000
+const hundreds = 100000 
 // console.log(hundreds.toLocaleString())
 // console.log(hundreds.toLocaleString('en-IN'))
 

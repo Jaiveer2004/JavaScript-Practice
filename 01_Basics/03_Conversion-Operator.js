@@ -1,9 +1,9 @@
-let score = "33a"
+let score = "33abc"
 
 // console.log(typeof score)
 
 // Conversion to Number
-let valueInNumber = Number(score) // Will convert String to Number
+// let valueInNumber = Number(score) // Will convert String to Number
 // console.log(typeof valueInNumber)
 // console.log(valueInNumber)
 
@@ -16,7 +16,7 @@ let valueInNumber = Number(score) // Will convert String to Number
 
 // If we convert undefined to Number, it will give a value of NaN
 
-// In Short
+// In Short : Number(op)
 // "33" => 33
 // "33ab" => NaN
 // null => 0
@@ -24,14 +24,14 @@ let valueInNumber = Number(score) // Will convert String to Number
 // true => 1, false => 0
 
 // Conversion to Boolean
-let isLoggedIn = 1
+let isLoggedIn = 2
 
-let booleanIsLoggedIn = Boolean(isLoggedIn)
+// let booleanIsLoggedIn = Boolean(isLoggedIn)
 // console.log(typeof booleanIsLoggedIn)
 // console.log(booleanIsLoggedIn)
 
 // In Short
-// 1 : true
+// 1, any other num : true
 // 0 : false
 // "" : false
 // "Jaiveer" : true
@@ -57,9 +57,10 @@ let str3 = str1 + str2
 
 // During these operations, it gets converted to the type of value which is at first. 
 // console.log("1" + 2) // It will get converted to "String"
-// console.log(1 + "2") // It will get converted to "Number"
-// console.log("1" + 2 + 2) // It will get converted to "String"
-// console.log(1 + 2 + "2") // It will get converted to "Number"
+// console.log(1 + "2") // It will get converted to "String"
+// console.log(3 - "2") // It will get converted to "Number"
+// console.log("1" + 2 - 1) // It will get converted to "String"
+// console.log(1 - 2 + "2") // It will get converted to "Number"
 
 
 // console.log(+true)
@@ -71,4 +72,3 @@ num1 = num2 = num3 = 2 + 2
 let gameCounter = 100
 ++gameCounter
 // console.log(gameCounter)
-

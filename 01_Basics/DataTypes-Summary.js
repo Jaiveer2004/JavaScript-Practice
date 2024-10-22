@@ -1,12 +1,12 @@
 // On the basis of how data is stored in the memory, datatypes are divided into two types.
 
-// 1. Primitive Data Types : Call by value data types
+// 1. Primitive Data Types : Call by value data types : Copy
 // 7 types: String, Number, Boolean, Null, undefined, Symbol (Used to make values unique), BigInt  
 
 // Dynamically Typed Language : We don't need to define the type of data of the variables
 const score = 100 
 
-// How to declare a symbol?
+// How to declare a symbol? 
 const id = Symbol("123") // This will be unique
 const anotherId = Symbol("123") // This will be unique
 
@@ -16,7 +16,7 @@ const anotherId = Symbol("123") // This will be unique
 // const bigNumber = 5245221212257758526555n
 
 // 2. Non Primitive Data Types : Reference Type
-// Arrays, Objects, Functions
+// Arrays : Object, Objects : Object, Functions : Function
 
 // Arrays
 const heros =  ["Shaktiman", "Naagraj", "Doga"]
@@ -34,5 +34,6 @@ const hero = {
 const myFunction = function() {
     console.log("Hello World")
 }
+
 // console.log(typeof myFunction) // will return function (Function Object)
 

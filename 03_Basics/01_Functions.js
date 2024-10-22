@@ -48,7 +48,7 @@ function calculateCartPrice(...num1) {
     return num1;
 }
 
-// console.log(calculateCartPrice(500, 600, 700));
+console.log(calculateCartPrice(500, 600, 700));
 
 // How to pass objects in a function?
 const user = {

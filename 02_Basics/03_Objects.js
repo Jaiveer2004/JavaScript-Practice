@@ -1,5 +1,5 @@
 // Singleton : Object when declared using Constructor
-// Non Singleton : Object when declared using Literals
+// Non Singleton : Object when declared using variable 
 
 // Obejct Literals:
 
@@ -16,7 +16,7 @@ const JsUser = {
     isLoggedIn : false,
     lastLoginDays : ["Monday", "Saturday"],
     "Full-Name" : "Jaiveer Singh", // This can't be accessed using (.) operator
-    [mySym] : "myKey1" // this is how we use symbol in an object
+    [mySym] : "myKey1", // this is how we use symbol in an object
 }
 
 // How to access values of objects?

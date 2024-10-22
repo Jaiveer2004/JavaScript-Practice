@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htnml Events </title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // Approach 1 : Should not be used : By injecting JS in HTML
+    // Avoid Injecting Events or JavaScript in InnerHTML
+
+    // Approach 2 : Old Approach, Not used Now
+    // document.getElementById('owl').onclick = function() {
+    //     alert("Owl");
+    // }
+
+    // Approach 3: Latest and often used
+    const owl = document.querySelector('#owl')
+    owl.addEventListener('click', (e) => {
+
+        // 'e' is event obejct 
+        // This contains all the information about the event such as Pointer Address (X, Y), Pointer Event, etc, etc
+        // Interview Questions: Create an app such that, where we click, it shows number, or it creates a circle at that place. This can be done using Time, Location Keys in Event Object.
+
+        // console.log(e);
+    }, false)
+    // There is a third parameter (default: false), known as Event Propogation. Event Public (False) and Event Capturing (True)  
+    // type, timestamp, defaultPrevented(), target, toElement, srcElement, currentTarget
+    // clientX, clientY, sceenX, screenY
+    // altKey, ctrlKey, shiftKey, keyCode
+
+    // Approach 4: By using "attachEvent()", it is very old, during the times of Interned Explorer where it was very difficult for the web pages to run on them
+
+    // Approach 5: jQuery framework: Old, had "onEvent()"
+
+
+    // Event Propogation:
+    // Selected the images id.
+    const images = document.querySelector('#images')
+    // Added event listener to it such that when a user clicks on the any "list item" of "ul", it would show "Clicked inside the ul" 
+    images.addEventListener('click', (e) => {
+        // console.log("Clicked inside the ul");
+    }, false)
+
+    // Added event listned to it in sich a way that wher a user clicks on the 'owl' image, it would show "Clicked Owl Image".
+
+    owl.addEventListener('click', (e) => {
+        // console.log("Owl Click");
+        // e.stopPropagation() // This is used to stop the propogation ahead. This will stop here when owl is clicked. It won't show "Click on other image"
+    }, false)
+
+    // Now here's, the catch. If we click on any other image than owl, it would only show "Clicked inside the ul"
+    // But, if we click on Owl image, it would show "Owl Click" and then "Clicked inside the ul"
+
+    // Now, if we want that "Clicked inside the ul" appears before "Owl Click", then we need to add True as value of Event Propogation which would lead to Event Capturing.
+    // Capturing occurs from Top to Bottom.
+    // This depends on your use case.
+    // Either capturing (Top to Bottom) or Bubbling (Bottom to Top)
+
+    // Default Prevented : Prevents default behaviour of the element. preventDefault()
+    const google = document.querySelector('#google')
+    google.addEventListener('click', (e) => {
+        // e.preventDefault(); // This will prevent the link to open, as we have prevented the anchor tag to act as Default. If we click on it, we won't be redricted
+        // e.stopPropagation()
+        // console.log("Google Clicked");
+    })
+
+    // Display none when clicked on images
+    images.addEventListener('click', (e) => {
+        // console.log(e.target); // Will show target(HTML tag) on which event is occuring
+        // console.log(e.target.parentNode); // It will take parentNode of the Element, if we don't implement it, the image would get removed but there would a bulletion point left.
+        let removeIt = e.target.parentNode
+        // removeIt.parentNode.removeChild(removeIt)
+        
+        // removeIt.remove() // Will remove it : newer and better method but when we click on any bulleton point, it will delete its parent which is (Images) and all the images would be deleted at once. To prevent this, we need to add if-else statement (also known as checks).
+
+        // Firstly we need to take the tagname of the target
+        // e.target.tagName
+        // If Tag Name === "IMG", it would then only remove it.
+
+        if(e.target.tagName === 'IMG') {
+            removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+    })
+
+
+
+</script>
+</html>

@@ -1,0 +1,34 @@
+JavaScript Async Notes:
+
+JavaScript is a Syncronous language, meaning it runs line by line. However, there are ways to make it run asynchronously. 
+
+Single Threaded : Everything runs on a single thread, so if one thing is running, everything else has to wait. It doesn't let you feel that it is Single Threaded because of the Evironment in which it runs.
+
+Default JavaScript Behaviour: Syncronous and Single Threaded
+
+Execution Context : The environment in which the code is executed. It consists of the Thread of Execution and the Memory.
+
+Call Stack : The place where the code is executed. It is a stack data structure, meaning it is a Last In First Out data structure.
+
+Blocking Code : Block the flow of Program. It is a code that takes a long time to execute.
+For Example: Wait for me until I get you a glass of water. By the time I get you a glass of water, you can't do anything else.
+Reading a file from the disk is a blocking code.
+Context -> Kernel -> Disk -> Kernel -> Context
+Kernel doesn't do anything until it gets the file from the disk.
+This is known as Reading File Syncronously.
+
+Non Blocking Code : Doesn't block the flow of Program. It is a code that doesn't take a long time to execute.
+For Example: I will get you a glass of water, you can do whatever you want until I get you a glass of water.
+Reading a file from the internet is a non blocking code.
+
+Now some people will think that Non-Blocking code is better than Blocking code. But that is not the case. Both have their own use cases.
+For Example: If you are reading a file from the disk, you want to make sure that you have the file before you do anything else. So, you want to block the code until you get the file.
+
+taskQueue : The place where the asyncronous code is executed. It is a First In First Out data structure. It makes the JavaScript fast and efficient.
+
+When Program is executed, it goes through the Call Stack and executes the code. If it encounters an asyncronous code, it moves it to the taskQueue and continues with the Call Stack. Once the Call Stack is empty, it moves the code from the taskQueue to the Call Stack and executes it.
+
+Whole Story through which the code goes through:
+Call Stack -> Web API -> Callback Queue -> Event Loop
+
+Promises : A way to handle asyncronous code. It is an object that represents the eventual completion or failure of an asyncronous operation. It is a placeholder for a value that we don't have yet. It is high priority in the taskQueue.

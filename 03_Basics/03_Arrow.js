@@ -10,7 +10,7 @@ const user = {
 }
 
 // user.welcomeMessage();
-// user.username = "Singh"; // Here value of current context has been changed
+user.username = "Singh"; // Here value of current context has been changed
 // user.welcomeMessage(); 
 
 // console.log(this); // This will show empty, Inside node environment "this" is referred to empty object as there is no context in global scope.
@@ -35,6 +35,7 @@ const arrowChai = () => {
     let username = "Jaiveer"
     console.log(this); 
 }
+
 
 // arrowChai();
 

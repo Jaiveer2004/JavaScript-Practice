@@ -16,7 +16,7 @@ for (const element of arr) {
 // String
 const str = "Hello, Hi!";
 for (const element of str) {
-    // console.log(element);   
+    console.log(element);   
 }
 
 // Maps : 
@@ -56,4 +56,3 @@ for (const [key, value] of map) {
 }
 
 // Objects are not iterable, we can't use "for of" in it.
-

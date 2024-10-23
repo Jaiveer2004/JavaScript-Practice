@@ -21,5 +21,6 @@ let score = 11
 // Even if the condition is false, it would run 1 time
 do {
     console.log(`Score is ${score}`);
+    
     score++
 } while (score <= 10);

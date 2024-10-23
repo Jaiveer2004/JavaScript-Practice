@@ -8,16 +8,17 @@ arr.forEach(function (item) {
     // console.log(item);
 })
 
+
 // Using arrow function
 arr.forEach( (item) => {
     // console.log(item);
 })
 
 // Using "pehle se defined" function 
-function printMe(item) {
-    // console.log(item);
+function printMe(a) {
+    console.log(a);
 }
-arr.forEach(printMe);
+// arr.forEach(printMe);
 
 // Using variable function
 const fun = function(item) {
@@ -55,6 +56,7 @@ const myCoding = [
         langExt : "py"
     }
 ]
+
 
 myCoding.forEach( (item) => {
     // console.log(item.langName);

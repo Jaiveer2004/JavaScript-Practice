@@ -36,6 +36,7 @@ for (const key in nums) {
     // console.log(nums[key]); // will print out numbers
 }
 
+
 // Map is not Iterable using For In
 const map = new Map()
 map.set('IN', "India");

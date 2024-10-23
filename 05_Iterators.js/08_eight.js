@@ -3,10 +3,12 @@
 
 const myNums = [1, 2, 3];
 
-const myTotal = myNums.reduce(function(acc, currVal) {
+let myTotal = myNums.reduce(function(acc, currVal) {
     // console.log(`acc: ${acc} and currVal: ${currVal}`);
     return acc + currVal;
-}, 0)
+}, 2)
+
+
 // console.log(myTotal);
 
 const myTotal2 = myNums.reduce((acc, currVal) => (acc + currVal), 0);
@@ -30,4 +32,4 @@ const shoppingCart = [
 ]
 
 const shoppingCartTotal = shoppingCart.reduce((acc, item) => (acc + item.itemPrice), 0)
-console.log(shoppingCartTotal);
+// console.log(shoppingCartTotal);

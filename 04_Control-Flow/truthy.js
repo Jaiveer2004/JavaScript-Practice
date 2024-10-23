@@ -19,7 +19,6 @@ BigInt-> 0n
 null
 undefined
 NaN
-
 */
 
 /*
@@ -29,7 +28,7 @@ Truty Values:
 " " (with space)
 [] (empty array)
 {} (empty object)
-fucntion() {} (empty function)
+function() {} (empty function)
 */
 
 // if(userEmail.length === 0) {
@@ -45,6 +44,7 @@ fucntion() {} (empty function)
 
 let val1;
 val1 = 5 ?? 10;
+
 // console.log(val1); // 5
 
 val1 = null ?? 10

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | Chai aur code</title>
+</head>
+<body>
+    <h1>Hi, This is JavaScript Events</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // Set Interval
+
+    const sayDate = function(str) {
+        console.log(str, Date.now());
+    }
+
+    
+    let interval;
+
+    document.querySelector('#start').addEventListener('click', () => {
+       interval = setInterval(sayDate, 2000, "Hi");
+       console.log(interval);
+    });
+
+    document.querySelector('#stop').addEventListener('click', () => {
+        clearInterval(interval)
+    })
+
+    
+</script>
+</html>

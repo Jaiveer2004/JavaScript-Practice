@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | Chai aur code</title>
+</head>
+<body>
+    <h1>Hi, This is JavaScript Events</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setTimeout() : Not a part of core JavaScript, we get it through browser.
+    // Parameters of setTimeout():
+    // Handler is a callback : A function with no name
+    // Timeout : number which means time in millisecond
+
+    // setTimeout(() => (console.log("Jaiveer")), 2000)
+    // After 2 second, it would print
+
+    // Set Interval : It would loop the provided with some interval of time
+    // setInterval(() => (console.log("Hello")), 2000)
+
+    // Clear Timeout : Used to prevent the timeout.
+    // To use this, it needs a reference of the setTimeout function which we need to stop. 
+    // So, let's hold setTimeout in a variable
+    
+    const changeText = function() {
+        document.querySelector('h1').innerHTML = "Jaiveer is the best"
+    }
+
+    const changeMe = setTimeout(changeText, 2000)
+    
+
+    document.querySelector('#stop').addEventListener('click', () => {
+        clearTimeout(changeMe, 2000)
+        console.log("Stopped!")
+    })
+
+    
+</script>
+</html>
